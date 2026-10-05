@@ -1,0 +1,21 @@
+.env
+web/node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+runs/*/stt_work/
+runs/*/chunks/
+# uploaded meetings are personal data - keep only the committed sample runs
+runs/*
+!runs/sample/
+!runs/sample_noisy/
+report/~$*
+
+# college lab write-ups (built locally from the department template, not part of the public project)
+report/
+# LaTeX build files
+docs/paper/*.aux
+docs/paper/*.log
+docs/paper/*.out
+docs/paper/*.pdf

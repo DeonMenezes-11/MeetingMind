@@ -1,0 +1,418 @@
+{
+  "title": "FestPAL Sprint Planning Meeting",
+  "executive_summary": "The team discussed the development of the FestPAL app for TechNova, deciding on the tech stack and key features. The live leaderboard was deferred to a future version due to time constraints. Action items were assigned, including design tasks and API development, with a timeline set for code freeze and Play Store submission. Risks regarding Wi-Fi reliability and sponsor logos were noted, along with an open question about payment processing.",
+  "topics": [
+    {
+      "title": "Introductions and Project Overview",
+      "start_segment_id": "S1",
+      "end_segment_id": "S5",
+      "summary": "Participants introduced themselves, and Priya outlined the project timeline, emphasizing the need for the app to be on the Play Store before March 20.",
+      "grounding": {
+        "grounded": true,
+        "start": 0.494,
+        "end": 40.136,
+        "timestamp": "00:00",
+        "issues": []
+      }
+    },
+    {
+      "title": "Tech Stack and Features Discussion",
+      "start_segment_id": "S6",
+      "end_segment_id": "S15",
+      "summary": "The team agreed to use Flutter for development and Firebase for authentication and notifications. The live leaderboard feature was cut from version one.",
+      "grounding": {
+        "grounded": true,
+        "start": 40.586,
+        "end": 110.744,
+        "timestamp": "00:40",
+        "issues": []
+      }
+    },
+    {
+      "title": "Action Items and Responsibilities",
+      "start_segment_id": "S16",
+      "end_segment_id": "S20",
+      "summary": "Rohan requested the final event list, which Priya will provide by Monday. Rohan will build the event schedule API by Friday, while Meera and Arjun have design and testing tasks due Wednesday and Thursday, respectively.",
+      "grounding": {
+        "grounded": true,
+        "start": 111.494,
+        "end": 148.25,
+        "timestamp": "01:51",
+        "issues": []
+      }
+    },
+    {
+      "title": "Risks and Open Questions",
+      "start_segment_id": "S22",
+      "end_segment_id": "S45",
+      "summary": "The team identified risks related to Wi-Fi reliability and the need for sponsor logos. An open question about payment processing was raised, and a timeline for code freeze and submission was established.",
+      "grounding": {
+        "grounded": true,
+        "start": 153.934,
+        "end": 305.732,
+        "timestamp": "02:33",
+        "issues": []
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "text": "Festpal will be built in Flutter.",
+      "evidence_segment_ids": [
+        "S9"
+      ],
+      "evidence_quote": "Okay, then it's decided: Festpal will be built in Flutter!",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S9"
+        ],
+        "issues": [],
+        "start": 62.092,
+        "end": 66.542,
+        "timestamp": "01:02",
+        "best_match_id": "S9"
+      }
+    },
+    {
+      "text": "We'll use Firebase for authentication and push notifications.",
+      "evidence_segment_ids": [
+        "S11"
+      ],
+      "evidence_quote": "Agreed! We'll use 'Firebase' for authentication and push notifications.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S11"
+        ],
+        "issues": [],
+        "start": 75.886,
+        "end": 87.686,
+        "timestamp": "01:15",
+        "best_match_id": "S11"
+      }
+    },
+    {
+      "text": "Cut the live leaderboard from version one and move it to version two.",
+      "evidence_segment_ids": [
+        "S15"
+      ],
+      "evidence_quote": "Then, let's cut the live leader board from version one and move it to version two.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S15"
+        ],
+        "issues": [],
+        "start": 105.944,
+        "end": 110.744,
+        "timestamp": "01:45",
+        "best_match_id": "S15"
+      }
+    },
+    {
+      "text": "Code freeze on March fourteenth and Play Store submission on March sixteenth.",
+      "evidence_segment_ids": [
+        "S47"
+      ],
+      "evidence_quote": "Great, that's agreed then-code freeze on march fourteenth and playstore submission on march sixteenth.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S47"
+        ],
+        "issues": [],
+        "start": 308.332,
+        "end": 318.832,
+        "timestamp": "05:08",
+        "best_match_id": "S47"
+      }
+    }
+  ],
+  "action_items": [
+    {
+      "owner": "Priya",
+      "task": "Get the cleaned event list and venue data from the fest committee",
+      "due": "Monday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S17"
+      ],
+      "evidence_quote": "That's on me. I'll get the cleaned event list and venue data from the fest committee by Monday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S17"
+        ],
+        "issues": [],
+        "start": 121.544,
+        "end": 127.694,
+        "timestamp": "02:01",
+        "best_match_id": "S17"
+      }
+    },
+    {
+      "owner": "Rohan",
+      "task": "Build the event schedule and registration API",
+      "due": "Friday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S18"
+      ],
+      "evidence_quote": "Then I'll build the event schedule and registration API and have it on staging by Friday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S18"
+        ],
+        "issues": [],
+        "start": 128.65,
+        "end": 135.65,
+        "timestamp": "02:08",
+        "best_match_id": "S18"
+      }
+    },
+    {
+      "owner": "Meera",
+      "task": "Finish the high fidelity designs for the schedule and map screens",
+      "due": "Wednesday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S19"
+      ],
+      "evidence_quote": "I'll finish the high fidelity designs for the schedule and map screens by Wednesday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S19"
+        ],
+        "issues": [],
+        "start": 136.3,
+        "end": 140.3,
+        "timestamp": "02:16",
+        "best_match_id": "S19"
+      }
+    },
+    {
+      "owner": "Arjun",
+      "task": "Write the test plan and set up testing on five Android phones",
+      "due": "Thursday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S20"
+      ],
+      "evidence_quote": "I'll write the test plan and set up testing on five Android phones by Thursday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S20"
+        ],
+        "issues": [],
+        "start": 141.1,
+        "end": 148.25,
+        "timestamp": "02:21",
+        "best_match_id": "S20"
+      }
+    },
+    {
+      "owner": "Rohan",
+      "task": "Set up push notifications with Firebase Cloud Messaging",
+      "due": "Tuesday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S27"
+      ],
+      "evidence_quote": "I'll set up push notifications with Firebase Cloud Messaging by next Tuesday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S27"
+        ],
+        "issues": [],
+        "start": 192.38,
+        "end": 197.48,
+        "timestamp": "03:12",
+        "best_match_id": "S27"
+      }
+    },
+    {
+      "owner": "Priya",
+      "task": "Email the sponsors for their logo files",
+      "due": "Wednesday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S32"
+      ],
+      "evidence_quote": "I'll e mail the sponsors for their logo files by Wednesday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S32"
+        ],
+        "issues": [],
+        "start": 222.316,
+        "end": 226.216,
+        "timestamp": "03:42",
+        "best_match_id": "S32"
+      }
+    },
+    {
+      "owner": "Meera",
+      "task": "Create the app icon and the splash screen",
+      "due": "Friday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S33"
+      ],
+      "evidence_quote": "And I'll create the app icon and the splash screen by Friday.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S33"
+        ],
+        "issues": [],
+        "start": 227.016,
+        "end": 232.366,
+        "timestamp": "03:47",
+        "best_match_id": "S33"
+      }
+    },
+    {
+      "owner": "Arjun",
+      "task": "Run the load test on the registration end point",
+      "due": "March twelfth",
+      "priority": "medium",
+      "evidence_segment_ids": [
+        "S38"
+      ],
+      "evidence_quote": "I'll run the load test on the registration end point by March twelfth.",
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "quote_coverage": 1.0,
+        "repaired": false,
+        "valid_ids": [
+          "S38"
+        ],
+        "issues": [],
+        "start": 258.442,
+        "end": 265.742,
+        "timestamp": "04:18",
+        "best_match_id": "S38"
+      }
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "Does the campus map need to work offline?",
+      "evidence_segment_ids": [
+        "S24",
+        "S25"
+      ],
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "valid_ids": [
+          "S24",
+          "S25"
+        ],
+        "issues": [],
+        "start": 169.884,
+        "timestamp": "02:49"
+      }
+    },
+    {
+      "text": "What is the payment processing method for paid workshops?",
+      "evidence_segment_ids": [
+        "S39",
+        "S41",
+        "S42"
+      ],
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "valid_ids": [
+          "S39",
+          "S41",
+          "S42"
+        ],
+        "issues": [],
+        "start": 266.492,
+        "timestamp": "04:26"
+      }
+    }
+  ],
+  "risks": [
+    {
+      "text": "The campus Wi-Fi may collapse during the fest, so the app has to work offline.",
+      "evidence_segment_ids": [
+        "S22"
+      ],
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "valid_ids": [
+          "S22"
+        ],
+        "issues": [],
+        "start": 153.934,
+        "timestamp": "02:33"
+      }
+    },
+    {
+      "text": "Rohan is also maintaining the fest website, which could delay the registration API.",
+      "evidence_segment_ids": [
+        "S34"
+      ],
+      "grounding": {
+        "grounded": true,
+        "score": 1.0,
+        "valid_ids": [
+          "S34"
+        ],
+        "issues": [],
+        "start": 233.366,
+        "timestamp": "03:53"
+      }
+    }
+  ],
+  "grounding_summary": {
+    "checked": 12,
+    "grounded": 12,
+    "ungrounded": 0,
+    "rate": 1.0
+  }
+}

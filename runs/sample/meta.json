@@ -1,0 +1,111 @@
+{
+  "run_id": "sample",
+  "created": "2026-10-04T23:17:38",
+  "source_name": "sprint_meeting.mp3",
+  "source_sha256": "0bc53675cd1c194a44adbdca7cccd9c807732e827253d6c257a869d944d41a17",
+  "models": {
+    "chat": "gpt-4o-mini",
+    "stt": "gpt-4o-transcribe-diarize",
+    "stt_fallback": "whisper-1",
+    "embed": "text-embedding-3-small"
+  },
+  "timings": {
+    "prepare": 0.82,
+    "transcribe": 103.68,
+    "speakers": 3.37,
+    "minutes": 10.33,
+    "grounding": 0.03,
+    "index": 0.76,
+    "export": 0.0,
+    "enrol": 124.27
+  },
+  "cached_stages": [
+    "prepare",
+    "transcribe",
+    "speakers",
+    "enrol",
+    "minutes",
+    "grounding",
+    "index",
+    "export"
+  ],
+  "usage": [
+    {
+      "stage": "transcribe",
+      "model": "gpt-4o-transcribe-diarize",
+      "kind": "stt",
+      "audio_seconds": 319.67,
+      "input_tokens": 6426,
+      "output_tokens": 9400,
+      "cost": 0.0319670625
+    },
+    {
+      "stage": "speakers",
+      "model": "gpt-4o-mini",
+      "kind": "chat",
+      "input_tokens": 1829,
+      "output_tokens": 163,
+      "cost": 0.00037214999999999997
+    },
+    {
+      "stage": "enrol",
+      "model": "gpt-4o-transcribe-diarize",
+      "kind": "stt",
+      "audio_seconds": 319.67,
+      "input_tokens": 6400,
+      "output_tokens": 9646,
+      "cost": 0.0319670625
+    },
+    {
+      "stage": "minutes",
+      "model": "gpt-4o-mini",
+      "kind": "chat",
+      "input_tokens": 2459,
+      "output_tokens": 1073,
+      "cost": 0.00101265
+    },
+    {
+      "stage": "index",
+      "model": "text-embedding-3-small",
+      "kind": "embed",
+      "input_tokens": 1669,
+      "output_tokens": 0,
+      "cost": 3.338e-05
+    }
+  ],
+  "duration": 319.67,
+  "audio_bytes": 2558349,
+  "chunks": 1,
+  "participants": [
+    "Priya",
+    "Rohan",
+    "Meera",
+    "Arjun"
+  ],
+  "stt_model_used": "gpt-4o-transcribe-diarize",
+  "diarized": true,
+  "fallback_reason": null,
+  "enrolled": true,
+  "enrolment_reason": "label A covers Meera and Priya",
+  "segments": 47,
+  "speakers": 4,
+  "grounding": {
+    "checked": 12,
+    "grounded": 12,
+    "ungrounded": 0,
+    "rate": 1.0
+  },
+  "index_windows": 16,
+  "title": "FestPAL Sprint Planning Meeting",
+  "cost": {
+    "total": 0.06535,
+    "by_stage": {
+      "transcribe": 0.03197,
+      "speakers": 0.00037,
+      "enrol": 0.03197,
+      "minutes": 0.00101,
+      "index": 3e-05
+    }
+  },
+  "total_latency": 243.26
+}

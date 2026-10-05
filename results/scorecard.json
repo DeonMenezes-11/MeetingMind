@@ -1,0 +1,548 @@
+[
+  {
+    "run_id": "sample",
+    "label": "clean",
+    "stt_model": "gpt-4o-transcribe-diarize",
+    "diarized": true,
+    "fallback_reason": null,
+    "duration_s": 319.67,
+    "wer": {
+      "edits": 30,
+      "substitutions": 17,
+      "deletions": 1,
+      "insertions": 12,
+      "ref_words": 750,
+      "hyp_words": 761,
+      "wer": 0.04
+    },
+    "speakers": {
+      "accuracy_by_duration": 1.0,
+      "accuracy_by_line": 1.0,
+      "diarization_best_map_accuracy": 0.9909,
+      "best_label_map": {
+        "Arjun": "Arjun",
+        "Meera": "Meera",
+        "Priya": "Priya",
+        "Rohan": "Rohan"
+      },
+      "detected_speakers": 4,
+      "gold_speakers": 4
+    },
+    "naming": {
+      "accuracy": 1.0,
+      "labels": {
+        "Arjun": {
+          "assigned": "Arjun",
+          "majority_gold": "Arjun",
+          "correct": true
+        },
+        "Meera": {
+          "assigned": "Meera",
+          "majority_gold": "Meera",
+          "correct": true
+        },
+        "Priya": {
+          "assigned": "Priya",
+          "majority_gold": "Priya",
+          "correct": true
+        },
+        "Rohan": {
+          "assigned": "Rohan",
+          "majority_gold": "Rohan",
+          "correct": true
+        }
+      }
+    },
+    "action_items": {
+      "gold": 8,
+      "predicted": 8,
+      "matched": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matches": [
+        {
+          "gold": "Create the app icon and splash screen",
+          "pred": "Create the app icon and the splash screen",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Email the sponsors for their logo files",
+          "pred": "Email the sponsors for their logo files",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Set up push notifications with Firebase Cloud Messaging",
+          "pred": "Set up push notifications with Firebase Cloud Messaging",
+          "f1": 1.0,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Write the test plan and set up testing on five Android phones",
+          "pred": "Write the test plan and set up testing on five Android phones",
+          "f1": 1.0,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        },
+        {
+          "gold": "Finish the high fidelity designs for the schedule and map screens",
+          "pred": "Finish the high fidelity designs for the schedule and map screens",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Get the cleaned event list and venue data from the fest committee",
+          "pred": "Get the cleaned event list and venue data from the fest committee",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Build the event schedule and registration API on staging",
+          "pred": "Build the event schedule and registration API",
+          "f1": 0.909,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Run the load test on the registration endpoint for 2,000 concurrent students",
+          "pred": "Run the load test on the registration end point",
+          "f1": 0.571,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        }
+      ],
+      "missed": [],
+      "extra": []
+    },
+    "due_date_accuracy": 1.0,
+    "injection_resisted": true,
+    "enrolled": true,
+    "enrolment_reason": "label A covers Meera and Priya",
+    "pass1": {
+      "wer": 0.0307,
+      "speakers": {
+        "accuracy_by_duration": 0.8053,
+        "accuracy_by_line": 0.7959,
+        "diarization_best_map_accuracy": 0.8071,
+        "best_label_map": {
+          "C": "Arjun",
+          "A": "Priya",
+          "B": "Rohan"
+        },
+        "detected_speakers": 3,
+        "gold_speakers": 4
+      }
+    },
+    "action_items_task_only": {
+      "gold": 8,
+      "predicted": 8,
+      "matched": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matches": [
+        {
+          "gold": "Create the app icon and splash screen",
+          "pred": "Create the app icon and the splash screen",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Email the sponsors for their logo files",
+          "pred": "Email the sponsors for their logo files",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Set up push notifications with Firebase Cloud Messaging",
+          "pred": "Set up push notifications with Firebase Cloud Messaging",
+          "f1": 1.0,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Write the test plan and set up testing on five Android phones",
+          "pred": "Write the test plan and set up testing on five Android phones",
+          "f1": 1.0,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        },
+        {
+          "gold": "Finish the high fidelity designs for the schedule and map screens",
+          "pred": "Finish the high fidelity designs for the schedule and map screens",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Get the cleaned event list and venue data from the fest committee",
+          "pred": "Get the cleaned event list and venue data from the fest committee",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Build the event schedule and registration API on staging",
+          "pred": "Build the event schedule and registration API",
+          "f1": 0.909,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Run the load test on the registration endpoint for 2,000 concurrent students",
+          "pred": "Run the load test on the registration end point",
+          "f1": 0.571,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        }
+      ],
+      "missed": [],
+      "extra": []
+    },
+    "decisions": {
+      "gold": 4,
+      "predicted": 4,
+      "matched": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matches": [
+        {
+          "gold": "Code freeze on March 14th and Play Store submission on March 16th",
+          "pred": "Code freeze on March fourteenth and Play Store submission on March sixteenth.",
+          "f1": 1.0,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Cut the live leaderboard from version one and move it to version two",
+          "pred": "Cut the live leaderboard from version one and move it to version two.",
+          "f1": 1.0,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Use Firebase for authentication and push notifications",
+          "pred": "We'll use Firebase for authentication and push notifications.",
+          "f1": 0.909,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Build FestPal in Flutter",
+          "pred": "Festpal will be built in Flutter.",
+          "f1": 0.667,
+          "gold_owner": null,
+          "pred_owner": null
+        }
+      ],
+      "missed": [],
+      "extra": []
+    },
+    "grounding": {
+      "checked": 12,
+      "grounded": 12,
+      "ungrounded": 0,
+      "rate": 1.0
+    },
+    "latency_s": {
+      "prepare": 0.82,
+      "transcribe": 103.68,
+      "speakers": 3.37,
+      "minutes": 10.33,
+      "grounding": 0.03,
+      "index": 0.76,
+      "export": 0.0,
+      "enrol": 124.27
+    },
+    "total_latency_s": 243.26,
+    "cost_usd": {
+      "total": 0.06535,
+      "by_stage": {
+        "transcribe": 0.03197,
+        "speakers": 0.00037,
+        "enrol": 0.03197,
+        "minutes": 0.00101,
+        "index": 3e-05
+      }
+    },
+    "audio_snr_db": null
+  },
+  {
+    "run_id": "sample_noisy",
+    "label": "noisy (10 dB SNR)",
+    "stt_model": "gpt-4o-transcribe-diarize",
+    "diarized": true,
+    "fallback_reason": null,
+    "duration_s": 319.67,
+    "wer": {
+      "edits": 26,
+      "substitutions": 16,
+      "deletions": 0,
+      "insertions": 10,
+      "ref_words": 750,
+      "hyp_words": 760,
+      "wer": 0.0347
+    },
+    "speakers": {
+      "accuracy_by_duration": 0.9264,
+      "accuracy_by_line": 0.9388,
+      "diarization_best_map_accuracy": 0.9262,
+      "best_label_map": {
+        "Arjun": "Arjun",
+        "Meera": "Meera",
+        "Priya": "Priya",
+        "Rohan": "Rohan"
+      },
+      "detected_speakers": 4,
+      "gold_speakers": 4
+    },
+    "naming": {
+      "accuracy": 1.0,
+      "labels": {
+        "Arjun": {
+          "assigned": "Arjun",
+          "majority_gold": "Arjun",
+          "correct": true
+        },
+        "Meera": {
+          "assigned": "Meera",
+          "majority_gold": "Meera",
+          "correct": true
+        },
+        "Priya": {
+          "assigned": "Priya",
+          "majority_gold": "Priya",
+          "correct": true
+        },
+        "Rohan": {
+          "assigned": "Rohan",
+          "majority_gold": "Rohan",
+          "correct": true
+        }
+      }
+    },
+    "action_items": {
+      "gold": 8,
+      "predicted": 7,
+      "matched": 7,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333,
+      "matches": [
+        {
+          "gold": "Email the sponsors for their logo files",
+          "pred": "Email the sponsors for their logo files",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Write the test plan and set up testing on five Android phones",
+          "pred": "Write the test plan and set up testing on five Android phones",
+          "f1": 1.0,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        },
+        {
+          "gold": "Finish the high fidelity designs for the schedule and map screens",
+          "pred": "Finish the high fidelity designs for the schedule and map screens",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Build the event schedule and registration API on staging",
+          "pred": "Build the event schedule and registration API and have it on staging",
+          "f1": 1.0,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Get the cleaned event list and venue data from the fest committee",
+          "pred": "Get the cleaned event list and venue data from the fest committee",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Create the app icon and splash screen",
+          "pred": "Create the app icon and the splash screen in Technova colors",
+          "f1": 0.833,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Run the load test on the registration endpoint for 2,000 concurrent students",
+          "pred": "Run the load test on the registration end point",
+          "f1": 0.571,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        }
+      ],
+      "missed": [
+        "Set up push notifications with Firebase Cloud Messaging"
+      ],
+      "extra": []
+    },
+    "due_date_accuracy": 1.0,
+    "injection_resisted": true,
+    "enrolled": true,
+    "enrolment_reason": "label A covers Meera and Priya",
+    "pass1": {
+      "wer": 0.0307,
+      "speakers": {
+        "accuracy_by_duration": 0.7875,
+        "accuracy_by_line": 0.7755,
+        "diarization_best_map_accuracy": 0.7865,
+        "best_label_map": {
+          "C": "Arjun",
+          "A": "Priya",
+          "B": "Rohan"
+        },
+        "detected_speakers": 3,
+        "gold_speakers": 4
+      }
+    },
+    "action_items_task_only": {
+      "gold": 8,
+      "predicted": 7,
+      "matched": 7,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333,
+      "matches": [
+        {
+          "gold": "Email the sponsors for their logo files",
+          "pred": "Email the sponsors for their logo files",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Write the test plan and set up testing on five Android phones",
+          "pred": "Write the test plan and set up testing on five Android phones",
+          "f1": 1.0,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        },
+        {
+          "gold": "Finish the high fidelity designs for the schedule and map screens",
+          "pred": "Finish the high fidelity designs for the schedule and map screens",
+          "f1": 1.0,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Build the event schedule and registration API on staging",
+          "pred": "Build the event schedule and registration API and have it on staging",
+          "f1": 1.0,
+          "gold_owner": "Rohan",
+          "pred_owner": "Rohan"
+        },
+        {
+          "gold": "Get the cleaned event list and venue data from the fest committee",
+          "pred": "Get the cleaned event list and venue data from the fest committee",
+          "f1": 1.0,
+          "gold_owner": "Priya",
+          "pred_owner": "Priya"
+        },
+        {
+          "gold": "Create the app icon and splash screen",
+          "pred": "Create the app icon and the splash screen in Technova colors",
+          "f1": 0.833,
+          "gold_owner": "Meera",
+          "pred_owner": "Meera"
+        },
+        {
+          "gold": "Run the load test on the registration endpoint for 2,000 concurrent students",
+          "pred": "Run the load test on the registration end point",
+          "f1": 0.571,
+          "gold_owner": "Arjun",
+          "pred_owner": "Arjun"
+        }
+      ],
+      "missed": [
+        "Set up push notifications with Firebase Cloud Messaging"
+      ],
+      "extra": []
+    },
+    "decisions": {
+      "gold": 4,
+      "predicted": 4,
+      "matched": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matches": [
+        {
+          "gold": "Code freeze on March 14th and Play Store submission on March 16th",
+          "pred": "Code freeze on March fourteenth and Play Store submission on March sixteenth.",
+          "f1": 1.0,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Cut the live leaderboard from version one and move it to version two",
+          "pred": "Cut the live leaderboard from version one and move it to version two.",
+          "f1": 1.0,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Use Firebase for authentication and push notifications",
+          "pred": "We'll use Firebase for authentication and push notifications.",
+          "f1": 0.909,
+          "gold_owner": null,
+          "pred_owner": null
+        },
+        {
+          "gold": "Build FestPal in Flutter",
+          "pred": "FestPal will be built in Flutter.",
+          "f1": 0.667,
+          "gold_owner": null,
+          "pred_owner": null
+        }
+      ],
+      "missed": [],
+      "extra": []
+    },
+    "grounding": {
+      "checked": 11,
+      "grounded": 11,
+      "ungrounded": 0,
+      "rate": 1.0
+    },
+    "latency_s": {
+      "prepare": 0.83,
+      "transcribe": 110.9,
+      "speakers": 2.89,
+      "enrol": 119.39,
+      "minutes": 10.36,
+      "grounding": 0.03,
+      "index": 0.91,
+      "export": 0.0
+    },
+    "total_latency_s": 245.31,
+    "cost_usd": {
+      "total": 0.06532,
+      "by_stage": {
+        "transcribe": 0.03197,
+        "speakers": 0.00037,
+        "enrol": 0.03197,
+        "minutes": 0.00099,
+        "index": 3e-05
+      }
+    },
+    "audio_snr_db": 10.0
+  }
+]

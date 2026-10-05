@@ -1,0 +1,9 @@
+owner,task,due,priority,grounded,grounding_score,timestamp,evidence_segment_ids,evidence_quote
+Priya,Get the cleaned event list and venue data from the fest committee,Monday,high,yes,1.0,02:01,S17,That's on me. I'll get the cleaned event list and venue data from the fest committee by Monday.
+Rohan,Build the event schedule and registration API,Friday,high,yes,1.0,02:08,S18,Then I'll build the event schedule and registration API and have it on staging by Friday.
+Meera,Finish the high fidelity designs for the schedule and map screens,Wednesday,high,yes,1.0,02:16,S19,I'll finish the high fidelity designs for the schedule and map screens by Wednesday.
+Arjun,Write the test plan and set up testing on five Android phones,Thursday,high,yes,1.0,02:21,S20,I'll write the test plan and set up testing on five Android phones by Thursday.
+Rohan,Set up push notifications with Firebase Cloud Messaging,Tuesday,high,yes,1.0,03:12,S27,I'll set up push notifications with Firebase Cloud Messaging by next Tuesday.
+Priya,Email the sponsors for their logo files,Wednesday,high,yes,1.0,03:42,S32,I'll e mail the sponsors for their logo files by Wednesday.
+Meera,Create the app icon and the splash screen,Friday,high,yes,1.0,03:47,S33,And I'll create the app icon and the splash screen by Friday.
+Arjun,Run the load test on the registration end point,March twelfth,medium,yes,1.0,04:18,S38,I'll run the load test on the registration end point by March twelfth.

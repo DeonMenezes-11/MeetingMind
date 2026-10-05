@@ -1,0 +1,162 @@
+{
+  "title": "FestCal Sprint Planning Meeting",
+  "executive_summary": "The team discussed the upcoming sprint for the FestCal app, which must be ready before the fest starting March 20. Key decisions included using Flutter for development and Firebase for authentication. Action items were assigned, including design tasks and API development, with a code freeze set for March 14 and Play Store submission on March 16. Several risks were identified, including potential issues with the campus Wi-Fi and the need for sponsor logos.",
+  "topics": [
+    {
+      "title": "Introductions and Sprint Overview",
+      "start_segment_id": "S1",
+      "end_segment_id": "S5",
+      "summary": "Participants introduced themselves, and Priya outlined the sprint timeline, emphasizing the need to launch the app before March 20."
+    },
+    {
+      "title": "Technical Stack and Features",
+      "start_segment_id": "S6",
+      "end_segment_id": "S14",
+      "summary": "The team agreed to use Flutter for development and Firebase for authentication. They decided to exclude the live leaderboard feature from the first version."
+    },
+    {
+      "title": "Action Items and Deadlines",
+      "start_segment_id": "S15",
+      "end_segment_id": "S42",
+      "summary": "Action items were assigned with specific deadlines, including cleaning the event list, designing screens, and setting up APIs. A code freeze and submission date were also agreed upon."
+    },
+    {
+      "title": "Risks and Open Questions",
+      "start_segment_id": "S21",
+      "end_segment_id": "S39",
+      "summary": "The team identified risks related to Wi-Fi reliability and the need for sponsor logos. They left some questions open regarding payment processing."
+    }
+  ],
+  "decisions": [
+    {
+      "text": "FestPal will be built in Flutter.",
+      "evidence_segment_ids": [
+        "S9"
+      ],
+      "evidence_quote": "Okay, then it's decided. FestPal will be built in Flutter."
+    },
+    {
+      "text": "We'll use Firebase for authentication and push notifications.",
+      "evidence_segment_ids": [
+        "S11"
+      ],
+      "evidence_quote": "Agreed. We'll use Firebase for authentication and push notifications."
+    },
+    {
+      "text": "Cut the live leaderboard from version one and move it to version two.",
+      "evidence_segment_ids": [
+        "S14"
+      ],
+      "evidence_quote": "Then let's cut the live leaderboard from version one and move it to version two."
+    },
+    {
+      "text": "Code freeze on March fourteenth and Play Store submission on March sixteenth.",
+      "evidence_segment_ids": [
+        "S43"
+      ],
+      "evidence_quote": "Great, that's agreed then. Code freeze on March fourteenth and Play Store submission on March sixteenth."
+    }
+  ],
+  "action_items": [
+    {
+      "owner": "Priya",
+      "task": "Get the cleaned event list and venue data from the fest committee",
+      "due": "Monday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S16"
+      ],
+      "evidence_quote": "That's on me. I'll get the cleaned event list and venue data from the fest committee by Monday."
+    },
+    {
+      "owner": "Rohan",
+      "task": "Build the event schedule and registration API and have it on staging",
+      "due": "Friday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S17"
+      ],
+      "evidence_quote": "Great! Then I'll build the event schedule and registration API and have it on staging by Friday."
+    },
+    {
+      "owner": "Meera",
+      "task": "Finish the high fidelity designs for the schedule and map screens",
+      "due": "Wednesday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S18"
+      ],
+      "evidence_quote": "I'll finish the high fidelity designs for the schedule and map screens by Wednesday."
+    },
+    {
+      "owner": "Arjun",
+      "task": "Write the test plan and set up testing on five Android phones",
+      "due": "Thursday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S19"
+      ],
+      "evidence_quote": "I'll write the test plan and set up testing on five Android phones by Thursday, including two older budget phones."
+    },
+    {
+      "owner": "Priya",
+      "task": "Email the sponsors for their logo files",
+      "due": "Wednesday",
+      "priority": "high",
+      "evidence_segment_ids": [
+        "S29"
+      ],
+      "evidence_quote": "I'll email the sponsors for their logo files by Wednesday."
+    },
+    {
+      "owner": "Meera",
+      "task": "Create the app icon and the splash screen in Technova colors",
+      "due": "Friday",
+      "priority": "medium",
+      "evidence_segment_ids": [
+        "S30"
+      ],
+      "evidence_quote": "And I'll create the app icon and the splash screen by Friday in the Technova colors."
+    },
+    {
+      "owner": "Arjun",
+      "task": "Run the load test on the registration end point",
+      "due": "March twelfth",
+      "priority": "medium",
+      "evidence_segment_ids": [
+        "S35"
+      ],
+      "evidence_quote": "Let's say two thousand students at the same time. I'll run the load test on the registration end point by March twelfth."
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "Does the campus map need to work off-line?",
+      "evidence_segment_ids": [
+        "S23",
+        "S24"
+      ]
+    },
+    {
+      "text": "Will paid workshops be paid inside the app, or do we just link to the college payment portal?",
+      "evidence_segment_ids": [
+        "S36",
+        "S37"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "text": "The campus wi-fi collapses during the fest, so the app has to work off-line.",
+      "evidence_segment_ids": [
+        "S21"
+      ]
+    },
+    {
+      "text": "If the FESC website breaks, the registration API could slip by a couple of days.",
+      "evidence_segment_ids": [
+        "S31"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+# MeetingMind - CLI session transcript (Deon Menezes 16014223030 & Aishwarya Gawali 16014223007, B1)
+# Generated 2026-10-04 23:39. The API key is read from .env and is never printed.
+
+$ python3 -m pytest -q
+........................................................                 [100%]
+57 passed in 1.52s
+
+$ python3 cli.py make-sample          # first (paid) build of the gold meeting
+wrote script with 49 lines -> sprint_meeting.json
+synthesising 49 lines with gpt-4o-mini-tts (0 cached)
+audio: 319.67 s total, 286.5 s speech -> sprint_meeting.mp3, sprint_meeting_noisy.mp3 (SNR 10 dB)
+gold: 8 action items, 4 decisions, 2 open questions, 2 risks
+
+$ python3 cli.py make-sample          # second call: nothing is re-synthesised
+sample already built (49 lines, 319.67 s) - use --force to rebuild
+gold: 8 action items, 4 decisions, 2 open questions, 2 risks
+
+$ python3 cli.py run samples/sprint_meeting_noisy.mp3 --run-id sample_noisy --participants "Priya,Rohan,Meera,Arjun"   # first full run
+MeetingMind run: sprint_meeting_noisy.mp3  (run id: sample_noisy)
+   [..] prepare    Preparing audio (ffmpeg, mono 16 kHz)
+   [ok] prepare    done (0.8s)
+   [..] transcribe Transcribing + diarizing speakers
+   [..] transcribe diarizing chunk 1/1 with gpt-4o-transcribe-diarize
+   [ok] transcribe done (110.9s)
+   [..] speakers   Identifying speakers from introductions
+   [ok] speakers   done (2.9s)
+   [..] enrol      Re-diarizing with self-enrolled voices
+   [..] enrol      re-diarizing because label A covers Meera and Priya
+   [ok] enrol      done (119.4s)
+   [..] minutes    Drafting structured minutes
+   [ok] minutes    done (14.6s)
+   [..] grounding  Verifying evidence for every item
+   [ok] grounding  done (0.0s)
+   [..] index      Building the Q&A retrieval index
+   [ok] index      done (1.4s)
+   [..] export     Writing exports
+   [ok] export     done (0.0s)
+
+Run 'sample_noisy' finished in 250.1s wall (pipeline stages total 250.1s; cached: none)
+STT model: gpt-4o-transcribe-diarize  diarized=True
+Self-enrolment pass: yes (label A covers Meera and Priya)
+   reference clip Priya      0.28-  6.28s (intro S1)
+   reference clip Rohan     10.18- 16.18s (intro S2)
+   reference clip Meera     17.43- 22.88s (intro S3)
+   reference clip Arjun     23.83- 29.83s (intro S4)
+Audio 05:19, 43 segments, 4 speakers
+Speakers:
+   ... (rest of this first run omitted - its minutes were regenerated after the prompt fixes described in the report)
+
+# Final state: re-running re-uses the cached audio/STT/enrolment stages (no repeat audio charges).
+$ python3 cli.py run samples/sprint_meeting.mp3 --run-id sample --participants "Priya,Rohan,Meera,Arjun"
+MeetingMind run: sprint_meeting.mp3  (run id: sample)
+   [==] prepare    cached (re-used cached result)
+   [==] transcribe cached (re-used cached result)
+   [==] speakers   cached (re-used cached result)
+   [==] enrol      cached (re-used cached result)
+   [==] minutes    cached (re-used cached result)
+   [==] grounding  cached (re-used cached result)
+   [==] index      cached (re-used cached result)
+   [==] export     cached (re-used cached result)
+
+Run 'sample' finished in 0.0s wall (pipeline stages total 243.3s; cached: prepare, transcribe, speakers, enrol, minutes, grounding, index, export)
+STT model: gpt-4o-transcribe-diarize  diarized=True
+Self-enrolment pass: yes (label A covers Meera and Priya)
+   reference clip Priya      1.79-  7.79s (intro S1)
+   reference clip Rohan     10.59- 13.49s (intro S2)
+   reference clip Meera     18.19- 22.89s (intro S3)
+   reference clip Arjun     23.89- 29.89s (intro S4)
+Audio 05:19, 47 segments, 4 speakers
+Speakers:
+   Priya -> Priya      Product Manager      talk  99.1s (35%), 15 turns
+   Rohan -> Rohan      back end developer   talk  82.7s (29%), 13 turns
+   Arjun -> Arjun      qa lead              talk  57.4s (20%), 9 turns
+   Meera -> Meera      UI Designer          talk  42.4s (15%), 9 turns
+
+Minutes: FestPAL Sprint Planning Meeting
+   4 topics, 4 decisions, 8 action items, 2 open questions, 2 risks
+   OK   decision [01:02] Festpal will be built in Flutter.
+   OK   decision [01:15] We'll use Firebase for authentication and push notifications.
+   OK   decision [01:45] Cut the live leaderboard from version one and move it to version two.
+   OK   decision [05:08] Code freeze on March fourteenth and Play Store submission on March sixteenth.
+   OK   action   [02:01] Priya: Get the cleaned event list and venue data from the fest committee (due Monday, high)
+   OK   action   [02:08] Rohan: Build the event schedule and registration API (due Friday, high)
+   OK   action   [02:16] Meera: Finish the high fidelity designs for the schedule and map screens (due Wednesday, high)
+   OK   action   [02:21] Arjun: Write the test plan and set up testing on five Android phones (due Thursday, high)
+   OK   action   [03:12] Rohan: Set up push notifications with Firebase Cloud Messaging (due Tuesday, high)
+   OK   action   [03:42] Priya: Email the sponsors for their logo files (due Wednesday, high)
+   OK   action   [03:47] Meera: Create the app icon and the splash screen (due Friday, high)
+   OK   action   [04:18] Arjun: Run the load test on the registration end point (due March twelfth, medium)
+Grounding: 12/12 items verified (100%)
+Estimated API cost: $0.0654  (by stage: {"transcribe": 0.03197, "speakers": 0.00037, "enrol": 0.03197, "minutes": 0.00101, "index": 3e-05})
+Exports: action_items.csv, minutes.json, minutes.md, transcript.srt
+
+$ python3 cli.py run samples/sprint_meeting_noisy.mp3 --run-id sample_noisy --participants "Priya,Rohan,Meera,Arjun"
+MeetingMind run: sprint_meeting_noisy.mp3  (run id: sample_noisy)
+   [==] prepare    cached (re-used cached result)
+   [==] transcribe cached (re-used cached result)
+   [==] speakers   cached (re-used cached result)
+   [==] enrol      cached (re-used cached result)
+   [==] minutes    cached (re-used cached result)
+   [==] grounding  cached (re-used cached result)
+   [==] index      cached (re-used cached result)
+   [==] export     cached (re-used cached result)
+
+Run 'sample_noisy' finished in 0.0s wall (pipeline stages total 245.3s; cached: prepare, transcribe, speakers, enrol, minutes, grounding, index, export)
+STT model: gpt-4o-transcribe-diarize  diarized=True
+Self-enrolment pass: yes (label A covers Meera and Priya)
+   reference clip Priya      0.28-  6.28s (intro S1)
+   reference clip Rohan     10.18- 16.18s (intro S2)
+   reference clip Meera     17.43- 22.88s (intro S3)
+   reference clip Arjun     23.83- 29.83s (intro S4)
+Audio 05:19, 43 segments, 4 speakers
+Speakers:
+   Priya -> Priya      product manager      talk  97.4s (34%), 14 turns
+   Rohan -> Rohan      back end developer   talk  90.5s (31%), 12 turns
+   Arjun -> Arjun      QA lead              talk  53.5s (18%), 8 turns
+   Meera -> Meera      UI Designer          talk  47.0s (16%), 9 turns
+
+Minutes: FestCal Sprint Planning Meeting
+   4 topics, 4 decisions, 7 action items, 2 open questions, 2 risks
+   OK   decision [01:02] FestPal will be built in Flutter.
+   OK   decision [01:15] We'll use Firebase for authentication and push notifications.
+   OK   decision [01:45] Cut the live leaderboard from version one and move it to version two.
+   OK   decision [05:08] Code freeze on March fourteenth and Play Store submission on March sixteenth.
+   OK   action   [02:01] Priya: Get the cleaned event list and venue data from the fest committee (due Monday, high)
+   OK   action   [02:08] Rohan: Build the event schedule and registration API and have it on staging (due Friday, high)
+   OK   action   [02:16] Meera: Finish the high fidelity designs for the schedule and map screens (due Wednesday, high)
+   OK   action   [02:21] Arjun: Write the test plan and set up testing on five Android phones (due Thursday, high)
+   OK   action   [03:42] Priya: Email the sponsors for their logo files (due Wednesday, high)
+   OK   action   [03:46] Meera: Create the app icon and the splash screen in Technova colors (due Friday, medium)
+   OK   action   [04:18] Arjun: Run the load test on the registration end point (due March twelfth, medium)
+Grounding: 11/11 items verified (100%)
+Estimated API cost: $0.0653  (by stage: {"transcribe": 0.03197, "speakers": 0.00037, "enrol": 0.03197, "minutes": 0.00099, "index": 3e-05})
+Exports: action_items.csv, minutes.json, minutes.md, transcript.srt
+
+$ python3 cli.py ask sample "When will the registration API be ready, and who is building it?"
+Q: When will the registration API be ready, and who is building it?
+A: The registration API will be ready on staging by Friday, and Rohan is building it [02:08].
+   found=True  reason=answered  best cosine=0.428
+   citation [02:08] -> S18 (valid)
+
+$ python3 cli.py ask sample "Why was the live leaderboard dropped?"
+Q: Why was the live leaderboard dropped?
+A: The live leaderboard was dropped because it is hard to test without the real contest running, and Priya suggested cutting it from version one and moving it to version two [01:42][01:45].
+   found=True  reason=answered  best cosine=0.485
+   citation [01:42] -> S14 (valid)
+   citation [01:45] -> S15 (valid)
+
+$ python3 cli.py ask sample "What is the capital of Australia?"
+Q: What is the capital of Australia?
+A: That wasn't discussed in this meeting.
+   found=False  reason=retrieval gate (best score 0.06 < 0.25)  best cosine=0.062
+
+$ python3 cli.py ask sample "Who is the chief guest at the fest?"
+Q: Who is the chief guest at the fest?
+A: That wasn't discussed in this meeting.
+   found=False  reason=model replied NOT_FOUND  best cosine=0.340
+
+$ python3 cli.py eval
+clean              WER 4.0% | speaker acc 100.0% | actions P 1.00 R 1.00 | decision R 1.00 | grounded 100% | latency 243.3s | cost $0.0654
+noisy (10 dB SNR)  WER 3.5% | speaker acc 92.6% | actions P 1.00 R 0.88 | decision R 1.00 | grounded 100% | latency 245.3s | cost $0.0653
+wrote results/scorecard.json and results/scorecard.md

@@ -1,0 +1,140 @@
+{
+  "inferred": {
+    "Arjun": {
+      "name": "Arjun",
+      "proposed": "Arjun",
+      "role": "qa lead",
+      "evidence": "S4",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "enrolled-reference"
+    },
+    "Meera": {
+      "name": "Meera",
+      "proposed": "Meera",
+      "role": "UI Designer",
+      "evidence": "S3",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "enrolled-reference"
+    },
+    "Priya": {
+      "name": "Priya",
+      "proposed": "Priya",
+      "role": "Product Manager",
+      "evidence": "S1",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "enrolled-reference"
+    },
+    "Rohan": {
+      "name": "Rohan",
+      "proposed": "Rohan",
+      "role": "back end developer",
+      "evidence": "S2",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "enrolled-reference"
+    }
+  },
+  "introductions": [
+    {
+      "name": "Priya",
+      "role": "Product Manager",
+      "segment_id": "S1",
+      "label": "A",
+      "start": 0.494
+    },
+    {
+      "name": "Rohan",
+      "role": "back end developer",
+      "segment_id": "S2",
+      "label": "B",
+      "start": 10.244
+    },
+    {
+      "name": "Meera",
+      "role": "UI Designer",
+      "segment_id": "S3",
+      "label": "A",
+      "start": 17.394
+    },
+    {
+      "name": "Arjun",
+      "role": "qa lead",
+      "segment_id": "S4",
+      "label": "C",
+      "start": 23.886
+    }
+  ],
+  "enrolment": {
+    "needed": true,
+    "reason": "label A covers Meera and Priya",
+    "speakers": [
+      {
+        "name": "Priya",
+        "role": "Product Manager",
+        "segment_id": "S1",
+        "clip_start": 1.79,
+        "clip_end": 7.79
+      },
+      {
+        "name": "Rohan",
+        "role": "back end developer",
+        "segment_id": "S2",
+        "clip_start": 10.59,
+        "clip_end": 13.49
+      },
+      {
+        "name": "Meera",
+        "role": "UI Designer",
+        "segment_id": "S3",
+        "clip_start": 18.19,
+        "clip_end": 22.89
+      },
+      {
+        "name": "Arjun",
+        "role": "qa lead",
+        "segment_id": "S4",
+        "clip_start": 23.89,
+        "clip_end": 29.89
+      }
+    ]
+  },
+  "participants": [
+    "Priya",
+    "Rohan",
+    "Meera",
+    "Arjun"
+  ],
+  "overrides": {},
+  "inferred_pass1": {
+    "A": {
+      "name": "Priya",
+      "proposed": "Priya",
+      "role": "Product Manager",
+      "evidence": "S1",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "llm-intro-cues"
+    },
+    "B": {
+      "name": "Rohan",
+      "proposed": "Rohan",
+      "role": "back end developer",
+      "evidence": "S2",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "llm-intro-cues"
+    },
+    "C": {
+      "name": "Arjun",
+      "proposed": "Arjun",
+      "role": "qa lead",
+      "evidence": "S4",
+      "confidence": 1.0,
+      "accepted": true,
+      "method": "llm-intro-cues"
+    }
+  }
+}
