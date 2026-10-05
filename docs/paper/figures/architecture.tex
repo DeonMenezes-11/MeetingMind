@@ -1,0 +1,42 @@
+% MeetingMind pipeline (TikZ) - included by meetingmind_ieee.tex
+\begin{tikzpicture}[
+  font=\sffamily\scriptsize, >={Stealth[length=4pt]},
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=1.08cm, text width=2.9cm, inner sep=2.5pt, line width=0.5pt},
+  local/.style={box, fill=black!5, draw=black!45},
+  ai/.style={box, fill=teal!9, draw=teal!65!black},
+  ui/.style={box, fill=blue!6, draw=blue!45!black},
+  arr/.style={->, line width=0.6pt, draw=black!70},
+  lbl/.style={font=\sffamily\tiny, text=black!70, align=center},
+]
+% row 1
+\node[local] (audio) at (0,0)    {\textbf{Meeting audio}\\upload + consent\\.mp3 / .wav / .m4a};
+\node[local] (prep)  at (3.45,0)  {\textbf{Audio preparation}\\ffmpeg: mono 16\,kHz\\chunks if $>$\,20 min};
+\node[ai]    (asr)   at (6.9,0)  {\textbf{Diarized ASR}\\{\fontsize{6.4}{7}\selectfont gpt-4o-transcribe-diarize}\\fragments $\rightarrow$ utterances};
+\node[ai]    (names) at (10.35,0)  {\textbf{Speaker naming}\\gpt-4o-mini, structured\\names from introductions};
+% row 2
+\node[ai]    (enrol) at (10.35,-1.75) {\textbf{Self-enrolment}\\intro clips as voice refs\\second diarization pass};
+\node[ai]    (min)   at (6.9,-1.75) {\textbf{Structured minutes}\\gpt-4o-mini + JSON schema\\items cite segment IDs};
+\node[local] (gr)    at (3.45,-1.75) {\textbf{Evidence grounding}\\ID check + quote coverage\\timestamps derived};
+\node[ai]    (idx)   at (0,-1.75)   {\textbf{Retrieval index}\\text-embedding-3-small\\4-utterance windows};
+% row 3
+\node[ui, text width=9.75cm, minimum height=1.0cm] (web) at (3.45,-3.6)
+  {\textbf{Web application} (FastAPI + React)\\live progress over SSE $\cdot$ transcript with shared audio player $\cdot$ minutes and editable action items\\Ask the meeting (cited RAG, refuses off-topic) $\cdot$ follow-up emails $\cdot$ exports (MD / JSON / CSV / SRT)};
+\node[local] (score) at (10.35,-3.6) {\textbf{Scorecard} (offline)\\WER, attribution, P/R/F1,\\grounding, latency, cost};
+% arrows
+\draw[arr] (audio) -- (prep);
+\draw[arr] (prep) -- (asr);
+\draw[arr] (asr) -- (names);
+\draw[arr] (names) -- node[right, lbl, xshift=1pt]{if two voices\\were merged} (enrol);
+\draw[arr] (enrol) -- (min);
+\draw[arr] (min) -- (gr);
+\draw[arr] (gr) -- (idx);
+\draw[arr] (idx.south) -- (idx.south |- web.north);
+\draw[arr] (gr.south) -- (gr.south |- web.north);
+\draw[arr] (min.south) -- (min.south |- web.north);
+\draw[arr] (enrol.south) -- (score.north);
+% legend
+\node[lbl, anchor=west] at (-1.3,0.95) {\tikz\draw[fill=black!5, draw=black!45] (0,0) rectangle (0.25,0.16);~local processing\quad
+  \tikz\draw[fill=teal!9, draw=teal!65!black] (0,0) rectangle (0.25,0.16);~OpenAI model call\quad
+  \tikz\draw[fill=blue!6, draw=blue!45!black] (0,0) rectangle (0.25,0.16);~user-facing\quad
+  every stage is cached in \texttt{runs/<id>/} with timings, token usage and cost};
+\end{tikzpicture}
