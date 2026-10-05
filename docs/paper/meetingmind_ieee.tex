@@ -21,6 +21,11 @@
 
 \newcommand{\repo}{\href{https://github.com/DeonMenezes-11/MeetingMind}{\nolinkurl{github.com/DeonMenezes-11/MeetingMind}}}
 
+% a full-width row under the author blocks (used for the repository link)
+\makeatletter
+\newcommand{\linebreakand}{\end{@IEEEauthorhalign}\hfill\mbox{}\par\mbox{}\hfill\begin{@IEEEauthorhalign}}
+\makeatother
+
 \begin{document}
 
 \title{MeetingMind: An End-to-End Generative AI System for Evidence-Grounded Meeting Intelligence}
@@ -35,7 +40,9 @@ Roll No. 16014223030}
 \IEEEauthorblockA{\textit{Dept. of Artificial Intelligence and Data Science}\\
 \textit{K. J. Somaiya School of Engineering}\\
 \textit{Somaiya Vidyavihar University}, Mumbai, India\\
-Roll No. 16014223007}}
+Roll No. 16014223007}
+\linebreakand
+\IEEEauthorblockA{\vspace{2pt}\normalsize GitHub repository: \href{https://github.com/DeonMenezes-11/MeetingMind}{\nolinkurl{https://github.com/DeonMenezes-11/MeetingMind}}}}
 
 \maketitle
 
