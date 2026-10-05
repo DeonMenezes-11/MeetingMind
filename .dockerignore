@@ -1,0 +1,10 @@
+.env
+**/__pycache__
+.pytest_cache
+web/node_modules
+web/dist
+report
+tests
+runs/*
+!runs/sample
+!runs/sample_noisy
